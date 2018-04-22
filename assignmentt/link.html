@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery Change HREF Attribute of Anchor Tag Dynamically</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('a[href^="http://"]').each(function(){ 
+            var oldUrl = $(this).attr("href"); // Get current url
+            var newUrl = oldUrl.replace("http://", "https://"); // Create new url
+            $(this).attr("href", newUrl); // Set herf value
+        });
+    });
+</script>
+</head>
+<body>
+    <p><a href="http://www.google.com">Google</a></p>
+    <p><a href="http://www.gmail.com">Gmail</a></p>
+</body> 
+</html>                            
